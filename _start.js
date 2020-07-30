@@ -19,10 +19,10 @@ const compareUrl = `https://github.com/chrisvfritz/vue-enterprise-boilerplate/co
 const startNote = `**You diverged from the boilerplate on ${divergeDate}. See [what's been added](${compareUrl}) since then.**`
 
 const newReadmeContent = fs
-  .readFileSync(path.join(__dirname, 'README.md'))
+  .readFileSync(path.join(__dirname, 'TODO-README.md'))
   .toString()
   .replace(ciBadge, startNote)
 
-fs.writeFileSync(path.join(__dirname, 'README.md'), newReadmeContent)
+fs.writeFileSync(path.join(__dirname, 'TODO-README.md'), newReadmeContent)
 
 require('./aliases.config')
